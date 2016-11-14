@@ -1,0 +1,4 @@
+CrashingApp.xcworkspace
+CrashingApp.xcodeproj/xcuserdata
+*.xcuserstate
+Pods
