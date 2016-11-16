@@ -1,0 +1,25 @@
+fastlane_version "1.108.0"
+
+default_platform :ios
+
+platform :ios do
+
+  ENV['FLURRY_AUTH_TOKEN'] = '<Put-Token-Here>'
+  ENV['FLURRY_API_KEY'] = 'ZYJS495P9NM7TVX3TRM2' # Use your own API Key Here
+
+  desc "Build for non-bitcode enabled apps. Includes uploading dSYMs"
+  lane :build do
+    cert
+    sigh
+    gym(scheme: "CrashingApp")
+    flurry_upload_dsym
+    clean_build_artifacts
+  end
+
+  desc "Upload dSYMs for bitcode enabled apps"
+  lane :upload_symbols do
+    download_dsyms
+    flurry_upload_dsym
+    clean_build_artifacts
+  end
+end

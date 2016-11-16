@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Flurry.setDebugLogEnabled(true);
         Flurry.setCrashReportingEnabled(true);
-        Flurry.startSession("ZYJS495P9NM7TVX3TRM2");
+        Flurry.startSession("ZYJS495P9NM7TVX3TRM2"); // Use your own API Key here
         return true
     }
 

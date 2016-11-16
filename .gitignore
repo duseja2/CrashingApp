@@ -1,4 +1,11 @@
 CrashingApp.xcworkspace
 CrashingApp.xcodeproj/xcuserdata
 *.xcuserstate
+.DS_STORE
 Pods
+/fastlane/screenshots
+/fastlane/metadata
+/fastlane/Appfile
+/fastlane/Deliverfile
+/fastlane/report.xml
+.idea
